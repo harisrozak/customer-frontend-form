@@ -1,0 +1,76 @@
+#customer_data .inside {
+	padding: 10px 0;
+}
+
+#customer_data .field-group {
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    padding: 0 12px 15px;
+}
+
+#customer_data .field-group:last-child {
+    padding-bottom: 0px;
+    border-bottom: none;
+}
+
+#customer_data .field-group:before,
+#customer_data .field-group:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+#customer_data .field-group > .field-group {
+    width: 50%;
+    float: left;
+    margin-bottom: 0;
+    padding: 0 7px;
+    border-bottom: none;
+    box-sizing: border-box;
+}
+
+#customer_data .field-group > .field-group:last-child {
+    padding-right: 0;
+}
+
+#customer_data .field-group > .field-group:first-child {
+    padding-left: 0;
+}
+
+#customer_data .field-section-title {
+    padding: 0 12px;
+    background: #f3f3f3;
+    margin-top: -12px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#customer_data .field-group > label {
+    display: block;
+    font-weight: 600;
+    padding: 0 0 7px;
+    font-size: 14px;
+    cursor: default;
+}
+
+#customer_data .field-group > span {
+    color: #333;
+    font-size: 12px;
+    display: block;
+    margin: 7px 0 0;
+}
+
+#customer_data .field-group > input[type='text'],
+#customer_data .field-group > input[type='number'],
+#customer_data .field-group > select,
+#customer_data .field-group > textarea,
+#customer_data .field-group > .select2-container,
+#customer_data .field-group > div > select{
+    width: 100%;
+}
