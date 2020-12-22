@@ -24,26 +24,26 @@ Class ETDTP_Ajax {
 		check_ajax_referer( '6&eC&D:EuG#kDn', 'nonce' );
 
 		// atts
-		$name = sanitize_text_field( $_POST[ 'name' ] );
-		$phone_number = sanitize_text_field( $_POST[ 'phone_number' ] );
-		$email = sanitize_email( $_POST[ 'email' ] );
-		$budget = sanitize_text_field( $_POST[ 'budget' ] );
-		$message = sanitize_text_field( $_POST[ 'message' ] );
-		$timezone = sanitize_text_field( $_POST[ 'timezone' ] );
-		$datetime = sanitize_text_field( $_POST[ 'datetime' ] );
+		$name 		  = sanitize_text_field( $_POST['name'] );
+		$phone_number = sanitize_text_field( $_POST['phone_number'] );
+		$email 	  	  = sanitize_email( $_POST['email'] );
+		$budget   	  = sanitize_text_field( $_POST['budget'] );
+		$message  	  = sanitize_text_field( $_POST['message'] );
+		$timezone 	  = sanitize_text_field( $_POST['timezone'] );
+		$datetime 	  = sanitize_text_field( $_POST['datetime'] );
 
 		// insert post
 		$post_id = wp_insert_post( array(
-			'post_title' => $name,
+			'post_title'  => $name,
 			'post_status' => 'publish',
-			'post_type' => 'customer',
-			'meta_input' => array(
+			'post_type'   => 'customer',
+			'meta_input'  => array(
 		        'phone_number' => $phone_number,
-		        'email' => $email,
-		        'budget' => $budget,
-		        'message' => $message,
-		        'timezone' => $timezone,
-		        'datetime' => $datetime,
+		        'email'	 	   => $email,
+		        'budget' 	   => $budget,
+		        'message' 	   => $message,
+		        'timezone' 	   => $timezone,
+		        'datetime' 	   => $datetime,
 		    ),
 		) );
 

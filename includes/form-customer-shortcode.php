@@ -32,24 +32,27 @@ Class ETDTP_FormCustomerShortcode {
 		wp_localize_script( 'form-customer', 'wp_ajax_obj', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 	}
 
-	public function shortcode_form_customer_callback( $atts ) {
-		// get atts value, or theirs default
-		$atts = shortcode_atts( array(
-	        'title' => 'FORM CUSTOMER',
-	        'label_name' => 'Name',
-	        'label_phone' => 'Phone Number',
-	        'label_email' => 'Email Address',
-	        'label_budget' => 'Desired Budget',
-	        'label_message' => 'Message',
-	        'label_submit' => 'Submit',
-	        'length_name' => '45',
-	        'length_phone' => '15',
-	        'length_email' => '25',
-	        'length_budget' => '25',
+	public function shortcode_form_customer_callback( $attributes ) {
+		// the default attributes
+		$default_attributes = array(
+	        'title'			 => 'FORM CUSTOMER',
+	        'label_name'	 => 'Name',
+	        'label_phone'	 => 'Phone Number',
+	        'label_email'	 => 'Email Address',
+	        'label_budget'	 => 'Desired Budget',
+	        'label_message'	 => 'Message',
+	        'label_submit'	 => 'Submit',
+	        'length_name'	 => '45',
+	        'length_phone'	 => '15',
+	        'length_email'	 => '25',
+	        'length_budget'  => '25',
 	        'length_message' => '',
-	        'textarea_rows' => '5',
-	        'textarea_cols' => '', // if empty, set width to 100% 
-	    ), $atts, 'form_customer' );
+	        'textarea_rows'  => '5',
+	        'textarea_cols'  => '', // if empty, set width to 100% 
+	    );
+
+		// get shortcode's final attributes
+		$atts = shortcode_atts( $default_attributes, $attributes, 'form_customer' );
 
 		// enqueue style and scripts
 		wp_enqueue_style( 'form-customer' );
