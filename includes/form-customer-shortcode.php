@@ -35,21 +35,21 @@ Class ETDTP_FormCustomerShortcode {
 	public function shortcode_form_customer_callback( $attributes ) {
 		// the default attributes
 		$default_attributes = array(
-	        'title'          => 'FORM CUSTOMER',
-	        'label_name'     => 'Name',
-	        'label_phone'    => 'Phone Number',
-	        'label_email'    => 'Email Address',
-	        'label_budget'   => 'Desired Budget',
-	        'label_message'	 => 'Message',
-	        'label_submit'   => 'Submit',
-	        'length_name'    => '45',
-	        'length_phone'   => '15',
-	        'length_email'   => '25',
-	        'length_budget'  => '25',
-	        'length_message' => '',
-	        'textarea_rows'  => '5',
-	        'textarea_cols'  => '', // if empty, set width to 100% 
-	    );
+			'title'          => 'FORM CUSTOMER',
+			'label_name'     => 'Name',
+			'label_phone'    => 'Phone Number',
+			'label_email'    => 'Email Address',
+			'label_budget'   => 'Desired Budget',
+			'label_message'	 => 'Message',
+			'label_submit'   => 'Submit',
+			'length_name'    => '45',
+			'length_phone'   => '15',
+			'length_email'   => '25',
+			'length_budget'  => '25',
+			'length_message' => '',
+			'textarea_rows'  => '5',
+			'textarea_cols'  => '', // if empty, set width to 100% 
+		);
 
 		// get shortcode's final attributes
 		$atts = shortcode_atts( $default_attributes, $attributes, 'form_customer' );
