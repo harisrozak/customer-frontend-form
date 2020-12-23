@@ -44,7 +44,7 @@ Class ETDTP_Ajax {
 				'message'      => $message,
 				'timezone'     => $timezone,
 				'datetime'     => $datetime,
-		    ),
+			),
 		) );
 
 		// notice success
