@@ -38,30 +38,30 @@ Class ETDTP_CustomerPostType {
 	// register custom post type
 	public function register_post_type() {
 		$post_type_labels = array(
-            'name' 			   	 => __( 'Customers', 'et-dev-test-project' ),
-            'singular_name'	     => __( 'Customer', 'et-dev-test-project' ),
-            'add_new' 		   	 => __( 'Add Customer', 'et-dev-test-project' ),
-            'add_new_item' 	   	 => __( 'Add Customer Item', 'et-dev-test-project' ),
-            'edit' 			   	 => __( 'Edit', 'et-dev-test-project' ),
-            'edit_item' 	   	 => __( 'Edit Customer', 'et-dev-test-project' ),
-            'new_item' 		   	 => __( 'New Customer', 'et-dev-test-project' ),
-            'view' 			   	 => __( 'View', 'et-dev-test-project' ),
-            'view_item' 	   	 => __( 'View Customer', 'et-dev-test-project' ),
-            'search_items' 	   	 => __( 'Search Customer', 'et-dev-test-project' ),
-            'not_found' 	   	 => __( 'No Customers Found', 'et-dev-test-project' ),
+            'name'               => __( 'Customers', 'et-dev-test-project' ),
+            'singular_name'      => __( 'Customer', 'et-dev-test-project' ),
+            'add_new'            => __( 'Add Customer', 'et-dev-test-project' ),
+            'add_new_item'       => __( 'Add Customer Item', 'et-dev-test-project' ),
+            'edit'               => __( 'Edit', 'et-dev-test-project' ),
+            'edit_item'          => __( 'Edit Customer', 'et-dev-test-project' ),
+            'new_item'           => __( 'New Customer', 'et-dev-test-project' ),
+            'view'               => __( 'View', 'et-dev-test-project' ),
+            'view_item'          => __( 'View Customer', 'et-dev-test-project' ),
+            'search_items'       => __( 'Search Customer', 'et-dev-test-project' ),
+            'not_found'          => __( 'No Customers Found', 'et-dev-test-project' ),
             'not_found_in_trash' => __( 'No Customer found in the trash', 'et-dev-test-project' ),
-            'parent' 			 => __( 'Parent Customer view ', 'et-dev-test-project' ),
+            'parent'             => __( 'Parent Customer view ', 'et-dev-test-project' ),
         );
 
 	    register_post_type( 'customer',
 	        array(
-	            'labels' 		=> $post_type_labels,
-	            'public' 		=> false,
-	            'show_ui' 		=> true,
-	            'supports' 		=> array( 'title' ),
+	            'labels'        => $post_type_labels,
+	            'public'        => false,
+	            'show_ui'       => true,
+	            'supports'      => array( 'title' ),
 	            'menu_position' => 5, // places menu item directly below Posts
-	            'menu_icon' 	=> 'dashicons-groups', // dashicons
-	            'taxonomies' 	=> array( 'customer_cat', 'customer_tag' )
+	            'menu_icon'     => 'dashicons-groups', // dashicons
+	            'taxonomies'    => array( 'customer_cat', 'customer_tag' )
 	        )
 	    );	
 	}
@@ -69,53 +69,53 @@ Class ETDTP_CustomerPostType {
 	// register custom taxonomies
 	public function register_taxonomies() {
 		$customer_cat_labels = array(
-	 		'name' 				=> __( 'Categories', 'et-dev-test-project' ),
-	 		'singular_name' 	=> __( 'Category', 'et-dev-test-project' ),
-	 		'search_items' 		=> __( 'Search Category', 'et-dev-test-project' ),
-	 		'all_items' 		=> __( 'All Category', 'et-dev-test-project' ),
-	 		'parent_item' 		=> __( 'Parent Category', 'et-dev-test-project' ),
+	 		'name'              => __( 'Categories', 'et-dev-test-project' ),
+	 		'singular_name'     => __( 'Category', 'et-dev-test-project' ),
+	 		'search_items'      => __( 'Search Category', 'et-dev-test-project' ),
+	 		'all_items'         => __( 'All Category', 'et-dev-test-project' ),
+	 		'parent_item'       => __( 'Parent Category', 'et-dev-test-project' ),
 	 		'parent_item_colon' => __( 'Parent Category:', 'et-dev-test-project' ),
-	 		'edit_item' 		=> __( 'Edit Category', 'et-dev-test-project' ), 
-	 		'update_item' 		=> __( 'Update Category', 'et-dev-test-project' ),
-	 		'add_new_item' 		=> __( 'Add New Category', 'et-dev-test-project' ),
-	 		'new_item_name' 	=> __( 'New Category Name', 'et-dev-test-project' ),
-	 		'menu_name' 		=> __( 'Categories', 'et-dev-test-project' ),
+	 		'edit_item'         => __( 'Edit Category', 'et-dev-test-project' ), 
+	 		'update_item'       => __( 'Update Category', 'et-dev-test-project' ),
+	 		'add_new_item'      => __( 'Add New Category', 'et-dev-test-project' ),
+	 		'new_item_name'     => __( 'New Category Name', 'et-dev-test-project' ),
+	 		'menu_name'         => __( 'Categories', 'et-dev-test-project' ),
 	 	);
 
 	 	$customer_tag_labels = array(
-	 		'name' 				=> __( 'Tags', 'et-dev-test-project' ),
-	 		'singular_name' 	=> __( 'Tag', 'et-dev-test-project' ),
-	 		'search_items' 		=> __( 'Search Tag', 'et-dev-test-project' ),
-	 		'all_items' 		=> __( 'All Tag', 'et-dev-test-project' ),
-	 		'parent_item' 		=> __( 'Parent Tag', 'et-dev-test-project' ),
+	 		'name'              => __( 'Tags', 'et-dev-test-project' ),
+	 		'singular_name'     => __( 'Tag', 'et-dev-test-project' ),
+	 		'search_items'      => __( 'Search Tag', 'et-dev-test-project' ),
+	 		'all_items'         => __( 'All Tag', 'et-dev-test-project' ),
+	 		'parent_item'       => __( 'Parent Tag', 'et-dev-test-project' ),
 	 		'parent_item_colon' => __( 'Parent Tag:', 'et-dev-test-project' ),
-	 		'edit_item' 		=> __( 'Edit Tag', 'et-dev-test-project' ), 
-	 		'update_item' 		=> __( 'Update Tag', 'et-dev-test-project' ),
-	 		'add_new_item' 		=> __( 'Add New Tag', 'et-dev-test-project' ),
-	 		'new_item_name' 	=> __( 'New Tag Name', 'et-dev-test-project' ),
-	 		'menu_name' 		=> __( 'Tags', 'et-dev-test-project' ),
+	 		'edit_item'         => __( 'Edit Tag', 'et-dev-test-project' ), 
+	 		'update_item'       => __( 'Update Tag', 'et-dev-test-project' ),
+	 		'add_new_item'      => __( 'Add New Tag', 'et-dev-test-project' ),
+	 		'new_item_name'     => __( 'New Tag Name', 'et-dev-test-project' ),
+	 		'menu_name'         => __( 'Tags', 'et-dev-test-project' ),
 	 	);
 
 		// register customer_cat
 		register_taxonomy( 'customer_cat', array( 'customer' ), array(
-	 		'hierarchical' 		=> true,
-	 		'labels' 			=> $customer_cat_labels,
-	 		'public' 			=> false,
-	 		'show_ui' 			=> true,
+	 		'hierarchical'      => true,
+	 		'labels'            => $customer_cat_labels,
+	 		'public'            => false,
+	 		'show_ui'           => true,
 	 		'show_admin_column' => true,
-	 		'query_var' 		=> true,
-	 		'rewrite' 			=> array( 'slug' => 'customer_cat' ),
+	 		'query_var'         => true,
+	 		'rewrite'           => array( 'slug' => 'customer_cat' ),
 	 	) );
 
 		// register customers_tag
 		register_taxonomy( 'customers_tag', array( 'customer' ), array(
-	 		'hierarchical' 		=> false,
-	 		'labels' 			=> $customer_tag_labels,
-		 	'public' 			=> false,
-	 		'show_ui' 			=> true,
+	 		'hierarchical'      => false,
+	 		'labels'            => $customer_tag_labels,
+		 	'public'            => false,
+	 		'show_ui'           => true,
 	 		'show_admin_column' => true,
-	 		'query_var' 		=> true,
-	 		'rewrite' 			=> array( 'slug' => 'customers_tag' ),
+	 		'query_var'         => true,
+	 		'rewrite'           => array( 'slug' => 'customers_tag' ),
 	 	) );
 	}
 
@@ -141,11 +141,11 @@ Class ETDTP_CustomerPostType {
 
 	   	// atts
 		$phone_number = sanitize_text_field( $_POST['phone_number'] );
-		$email 		  = sanitize_email( $_POST['email'] );
-		$budget		  = sanitize_text_field( $_POST['budget'] );
-		$message 	  = sanitize_text_field( $_POST['message'] );
-		$timezone 	  = sanitize_text_field( $_POST['timezone'] );
-		$datetime 	  = sanitize_text_field( $_POST['datetime'] );
+		$email        = sanitize_email( $_POST['email'] );
+		$budget       = sanitize_text_field( $_POST['budget'] );
+		$message      = sanitize_text_field( $_POST['message'] );
+		$timezone     = sanitize_text_field( $_POST['timezone'] );
+		$datetime     = sanitize_text_field( $_POST['datetime'] );
 
 		// update post meta
 	    update_post_meta( $post_id, 'phone_number', $phone_number );
@@ -161,11 +161,11 @@ Class ETDTP_CustomerPostType {
 	    wp_nonce_field( '6&eC&D:EuG#kDn', 'nonce' );
 
 	    $phone_number = get_post_meta( $post->ID, 'phone_number', true );
-	    $email 	 	  = get_post_meta( $post->ID, 'email', true );
-	    $budget		  = get_post_meta( $post->ID, 'budget', true );
-	    $message	  = get_post_meta( $post->ID, 'message', true );
-	    $timezone 	  = get_post_meta( $post->ID, 'timezone', true );
-	    $datetime 	  = get_post_meta( $post->ID, 'datetime', true );
+	    $email        = get_post_meta( $post->ID, 'email', true );
+	    $budget       = get_post_meta( $post->ID, 'budget', true );
+	    $message      = get_post_meta( $post->ID, 'message', true );
+	    $timezone     = get_post_meta( $post->ID, 'timezone', true );
+	    $datetime     = get_post_meta( $post->ID, 'datetime', true );
 	 
 		require ETDTP_PATH . 'templates/customer-meta-box.php';
 	}
