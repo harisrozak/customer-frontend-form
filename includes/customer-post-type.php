@@ -111,7 +111,7 @@ Class ETDTP_CustomerPostType {
 		register_taxonomy( 'customers_tag', array( 'customer' ), array(
 			'hierarchical'      => false,
 			'labels'            => $customer_tag_labels,
-		'public'            => false,
+			'public'            => false,
 			'show_ui'           => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
@@ -139,7 +139,7 @@ Class ETDTP_CustomerPostType {
 		// because save_post can be triggered at other times
 		if ( isset( $_POST['nonce'] ) && ! wp_verify_nonce( $_POST['nonce'], '6&eC&D:EuG#kDn' ) ) return;
 
-			// atts
+		// atts
 		$phone_number = sanitize_text_field( $_POST['phone_number'] );
 		$email        = sanitize_email( $_POST['email'] );
 		$budget       = sanitize_text_field( $_POST['budget'] );
